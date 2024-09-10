@@ -1,0 +1,16 @@
+# @name create_goal
+POST http://localhost:3214/goals
+Content-Type: application/json
+
+{
+  "title": "Comer de 3 em 3 horas",
+  "desiredWeeklyFrequency": 7
+}
+
+###
+
+# @name get_week_pending_goals
+GET http://localhost:3214/goals/week-pending
+Content-Type: application/json
+
+###
