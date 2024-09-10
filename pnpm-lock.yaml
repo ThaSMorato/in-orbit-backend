@@ -7,10 +7,13 @@ settings:
 dependencies:
   drizzle-orm:
     specifier: ^0.33.0
-    version: 0.33.0
+    version: 0.33.0(postgres@3.4.4)
   fastify:
     specifier: ^4.28.1
     version: 4.28.1
+  postgres:
+    specifier: ^3.4.4
+    version: 3.4.4
   zod:
     specifier: ^3.23.8
     version: 3.23.8
@@ -889,7 +892,7 @@ packages:
       - supports-color
     dev: true
 
-  /drizzle-orm@0.33.0:
+  /drizzle-orm@0.33.0(postgres@3.4.4):
     resolution: {integrity: sha512-SHy72R2Rdkz0LEq0PSG/IdvnT3nGiWuRk+2tXZQ90GVq/XQhpCzu/EFT3V2rox+w8MlkBQxifF8pCStNYnERfA==}
     peerDependencies:
       '@aws-sdk/client-rds-data': '>=3'
@@ -977,6 +980,8 @@ packages:
         optional: true
       sqlite3:
         optional: true
+    dependencies:
+      postgres: 3.4.4
     dev: false
 
   /esbuild-register@3.6.0(esbuild@0.19.12):
@@ -1253,6 +1258,11 @@ packages:
       safe-stable-stringify: 2.5.0
       sonic-boom: 4.1.0
       thread-stream: 3.1.0
+    dev: false
+
+  /postgres@3.4.4:
+    resolution: {integrity: sha512-IbyN+9KslkqcXa8AO9fxpk97PA4pzewvpi2B3Dwy9u4zpV32QicaEdgmF3eSQUzdRk7ttDHQejNgAEr4XoeH4A==}
+    engines: {node: '>=12'}
     dev: false
 
   /process-warning@3.0.0:
