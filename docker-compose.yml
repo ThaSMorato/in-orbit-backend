@@ -1,0 +1,15 @@
+name: pocket-js-nlw
+
+version: '3.8'
+
+services:
+  pg-db:
+    image: bitnami/postgresql:13.16.0
+    environment:
+      POSTGRES_USER: docker
+      POSTGRES_PASSWORD: docker
+      POSTGRES_DB: inorbit
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
